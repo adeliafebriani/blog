@@ -1,0 +1,131 @@
+21/8/2024 WEDNESDAY
+
+create folder blog
+
+npm init -y // to get package.json
+
+touch index.js
+yarn add express cors multer || npm i express mongoose**
+yarn add nodemon // dont need to restart if any changes || npm install --save-dev nodemon**
+                 // references: npm nodemon
+
+package.json>>
+ "scripts": {
+    "dev": "nodemon index.js", // add this
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+yarn add dotenv**
+
+index.js>>
+const express = require ('express');
+...
+
+npm run dev
+
+create folder middleware
+file middleware.js
+
+open postman
+testing with post method
+
+create folder routes
+file user.js
+
+create folder controller
+file user.js
+
+^^yarn code the services, its easier to find if create the folder and file
+
+go to postman
+click on the website localhost:4500/api/v1/user
+----------------------------------------------------------------
+23/8/2024 FRIDAY
+
+start with the controller
+use postman to test out
+
+yarn add mongoose bcrypt joi (database, database driver.. SQL)
+
+create config/connectDb.js (connect this database)
+
+create .env >>
+PORT = 4500
+DB_URL = mongodb://localhost:27017/blog
+
+in controller, const joi+bcrypt, createUser
+
+create model/user.js (userData, progress, create your table database)
+go to the controller 
+-validate, require the input you get from user
+-findone to require
+-salt = to generate random stuff = solidity
+-create instance of the user class User(email, pass)
+----------------------------------------------------------------
+28/8/2024 WEDNESDAY
+
+update user model table for database in model/user.js
+update user controller in controller/user.js
+
+yarn add jsonwebtoken
+
+// generate a secret to sign => store to the env
+bash >>
+openssl rand -base64 20
+
+.env >> JWT_SECRET=??
+
+auth middleware in middleware.js
+
+// create user
+----------------------------------------------------------------
+30/8/2024 FRIDAY
+
+Presentation
+----------------------------------------------------------------
+4/9/2024 WEDNESDAY
+
+node index.js
+yarn dev (to connect/run)
+
+routes file>>
+middleware>>
+
+create
+get
+login => get auth bearer token
+update
+
+STEP 1- create: email, password
+{
+    "password": "password147"
+    "email": "adylia147@gmail.com"
+}
+
+STEP 2- login: email, password
+{
+    "password": "password147"
+    "email": "adylia147@gmail.com"
+}
+
+STEP 3- copy token [secret], paste dekat auth bearer token->token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkeWxpYTE0N0BnbWFpbC5jb20iLCJpZCI6IjY2ZDk2ZjE0ZTFlNDI0YjIwZjAzYjMwOSIsImlhdCI6MTcyNTUyNjYxMH0.7pqQdMWgrYPufeREJ6JJNlFo8G-ogz58H_AI929wYzE
+
+STEP 4- update:
+{
+    "firstName" : "Adelia"
+    "lastName" : "Febriani"
+}
+
+// create profile 
+
+assignment: creating some endpoint (on your own)
+----------------------------------------------------------------
+5/9/2024 FRIDAY
+
+soft on how delete the user
+create article in controller, add in model, and routes for article
+create function for get article, get articleById in controller
+----------------------------------------------------------------
+11/9/2024 WEDNESDAY
+
+updateArticleById, deleteArticleById
