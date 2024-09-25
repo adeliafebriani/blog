@@ -6,14 +6,14 @@ git status // if not in the respository, initialize git
 ls -la // list of folder/file
 git init // initialize git = create .git folder
 ls -la // check .git
-git status
+git status // check for every update that made
 
+touch .gitignore
+**dont need to push these:**
 **dont need files that is in our local storage**
 **dont need push secret file**
 
-touch .gitignore
-
-**dont need to push these:**
+.gitignore>>
 .DS_Store
 .env
 .env.*
@@ -27,65 +27,63 @@ git add . // to add everything
 REMOVE FROM GIT
 git rm -r --cached <filename>/
 
-git status
-git branch
+RESTORE
+git restore --staged <filename>/
 
+SWITCH
+git switch -c <branchname: test> // -c is to create branch
+git switch <branchname: main> // switch balik ke asal iaitu main
+
+BRANCH
+git branch -m main
+git branch // to see the content OR changes of the branch
+
+EXPLORE GIT DIRECTORY
 cd .git
 ls
-cat HEAD
+cat HEAD // cat: to see what's inside? && HEAD: where we are currently on?
 cat config
 cat index
+cd refs 
 
-cd refs
-
-cd >> move in 
-cd .. >> move out
-ls >> list
+cd // move in 
+cd .. // move out
+ls // list
 
 **if first time**
-git commit -m 'initial commit'
 
+SAVE CHANGES w DESCRIPTION
+git commit -m '<decription>'
+
+HISTORY
 git log >> git history >> get commit number to get changes
-git log --oneline
-**click 'q' to quit**
+git log --oneline // taknak tgk panjang lebar, simple display output
 
 .git/object >> convert format >> store it with bit files >> saving the snapshot
 
+REMOVE GIT DIRECTORY
 rm -rf .git >> remove the branch git in the visual
 
-git init >> initialize where
-git branch -m main >> main branch
-git add 
-git commit -m 'initial commit'
-git status
+ADD GIT DIRECTORY
+git init
 
-
-**make changes:**
+IF YOU MADE ANY ADDED OR CHANGED
 git add util/ || git add . >> to save the changes >> git commit -m 'add (what?)'
 git status
 git commit -m 'w/c: add util folder'
 git log >> history for the changes
 
-**move path:**
+MOVE PATH
 git switch [gitnum]
 git branch [gitnum]
 git switch --detach [gitnum]
 git switch main
 
-**branch:**
+WHAT IS BRANCH?
 single worktree
 working remains in me
 a copy of your home project
 my own branch, that im working on
-
-**create a new branch:**
-git switch -c [name of the branch]
-
-different branch, different changes saving
-git main
-git switch [othergitbranchname]
-
-git merge branch
 --------------------------------------------------------
 20/9/2024 FRIDAY
 
