@@ -1,0 +1,151 @@
+18/9/2024 WEDNESDAY
+
+bash>>
+git version
+git status // if not in the respository, initialize git
+ls -la // list of folder/file
+git init // initialize git = create .git folder
+ls -la // check .git
+git status
+
+**dont need files that is in our local storage**
+**dont need push secret file**
+
+touch .gitignore
+
+**dont need to push these:**
+.DS_Store
+.env
+.env.*
+node_modules/
+<secretFiles>
+
+ADD TO GIT
+git add <filename>/ OR git commit -a
+git add . // to add everything
+
+REMOVE FROM GIT
+git rm -r --cached <filename>/
+
+git status
+git branch
+
+cd .git
+ls
+cat HEAD
+cat config
+cat index
+
+cd refs
+
+cd >> move in 
+cd .. >> move out
+ls >> list
+
+**if first time**
+git commit -m 'initial commit'
+
+git log >> git history >> get commit number to get changes
+git log --oneline
+**click 'q' to quit**
+
+.git/object >> convert format >> store it with bit files >> saving the snapshot
+
+rm -rf .git >> remove the branch git in the visual
+
+git init >> initialize where
+git branch -m main >> main branch
+git add 
+git commit -m 'initial commit'
+git status
+
+
+**make changes:**
+git add util/ || git add . >> to save the changes >> git commit -m 'add (what?)'
+git status
+git commit -m 'w/c: add util folder'
+git log >> history for the changes
+
+**move path:**
+git switch [gitnum]
+git branch [gitnum]
+git switch --detach [gitnum]
+git switch main
+
+**branch:**
+single worktree
+working remains in me
+a copy of your home project
+my own branch, that im working on
+
+**create a new branch:**
+git switch -c [name of the branch]
+
+different branch, different changes saving
+git main
+git switch [othergitbranchname]
+
+git merge branch
+--------------------------------------------------------
+20/9/2024 FRIDAY
+
+git switch main
+git branch
+
+how to push code from github?
+**create new respository**
+
+**copy link respository**
+https://github.com/adeliafebriani/blog-server.git
+
+git remote -v
+git remote add origin git@github.com:adeliafebriani/blog-server.git
+
+**make sure, cek the status**
+git status
+
+**push the git code**
+git push -u origin main
+
+**pull back**
+git config pull.rebase false
+git pull origin main
+git pull
+
+git pull --allow-unrelated-histories
+
+README>>
+
+# Install Dependencies
+```yarn```
+
+# Run the code
+```yarn dev```
+
+terminal>>
+
+git log --oneline
+**to check the history of any changes**
+
+**collaborate**
+
+in terminal desktop>>
+git clone git@github.com:adeliafebriani/blog-server.git
+
+send pull request
+git switch -c adelia-feature // create my own branch
+
+modify the README>>
+## Blog Server
+
+## Install Dependencies
+`yarn`
+
+## Run the code
+`yarn dev`
+
+git status
+git add .
+git commit -m 'modify read.me file heading'
+git push -u origin jude-feature
+**add password**
