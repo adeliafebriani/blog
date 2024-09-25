@@ -90,6 +90,9 @@ my own branch, that im working on
 git switch main
 git branch
 
+QUIT FROM BRANCH CONTENT
+:q
+
 how to push code from github?
 **create new respository**
 
