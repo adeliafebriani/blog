@@ -1,2 +1,8 @@
 node index.js
 yarn dev
+
+add .env file>>
+
+PORT=
+DB_URL=
+JWT_SECRET=
